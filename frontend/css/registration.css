@@ -1,0 +1,118 @@
+body {
+    --text-color: #ffffff;
+    --bkg-popup-color: #ffffff;
+    --bkg-panel-color: #99cccc;
+    --bkg-color: #ffffff;
+    --design: #3b5236;
+    --dark-design: #ffffff;
+    --container: #ffffff;
+    --calendar: #ffffff;
+}
+
+.containter{
+    background-image:url('../img/title.png');
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 5vh 15vh 15vh 15vh 15vh;
+    row-gap:  15vh;
+    overflow: hidden;
+}
+
+.containter h2{
+    display: grid;
+    font-size: 72px;
+    margin-top: 10vh;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.login_field, .pass_field, .pass_field_verifivation{
+    display: grid;
+    min-height: 100px;
+    max-height: 140px;
+    width: 70%;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#login_in, #pass_in, #pass_in_verifivation{
+    background: var(--bkg-color);
+    color: var(--design);
+    padding: 1rem 1rem;
+    font-size:28px;
+    border-radius: 10px;
+    border: 0cm;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#login_in::placeholder, #pass_in::placeholder, #pass_in_verifivation::placeholder{
+    color: var(--design);
+}
+
+.authorization_buttons{
+    display: grid;
+    height: 50%;
+    width: 40%;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+   text-align: center;
+   margin: 0.5em;
+   background: var(--bkg-color);
+   color: var(--design);
+   padding: 1rem 1rem;
+   text-decoration: none;
+   font-size: 24px;
+   border-radius: 15px;
+   -webkit-border-radius: 15px;
+   -moz-border-radius: 15px;
+   -ms-border-radius: 15px;
+   -o-border-radius: 15px;
+}
+
+#registry{
+    border: 0px;
+}
+
+#registry:hover{
+    color: var(--design);
+    background: var(--bkg-panel-color);
+}
+
+@media (max-width: 480px){
+
+    #login_in::placeholder, #pass_in::placeholder, .small_text{
+        font-size: 20px;
+    }
+
+    .containter{
+        background-image:url('../img/title.png');
+        width: 100%;
+        height: 100%;
+    }
+
+    .authorization_buttons{
+        margin-top: 5vh;
+        min-height: 180px;
+        width:fit-content;
+    }
+
+    .login_field{
+        width: 100%;
+        height: inherit;
+        margin-top: 12.5vh;
+    }
+
+    .pass_field{
+        width: 100%;
+        height: inherit;
+        margin-top: 5vh;
+    }
+}

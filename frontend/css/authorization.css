@@ -1,0 +1,17 @@
+.h2_class{
+    margin-top: 5vh;
+}
+
+.login_field{
+    margin-top: 15vh;
+}
+
+.authorization_buttons{
+    margin-top: 5vh;
+}
+
+@media (max-width: 480px){
+    .authorization_buttons{
+        margin-top: 4.5vh;
+    }
+}

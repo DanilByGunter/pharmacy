@@ -1,0 +1,28 @@
+.medecines-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 столбца одинаковой ширины */
+    gap: 10px; /* Расстояние между элементами */
+    max-height: 100vh; /* Ограничиваем высоту контейнера */
+    overflow-y: auto; /* Добавляем вертикальную прокрутку, если контент превышает высоту */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.medecine-card {
+    color: var(--text-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.medecine-card img {
+    width: 100%;
+    height: auto;
+}
+
+.medecine-card h3 {
+    color: var(--text-color);
+    font-size: 1.2em;
+    margin: 10px 0;
+}

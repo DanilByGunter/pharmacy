@@ -1,0 +1,65 @@
+.medicine-details {
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.image_center{
+    text-align: center;
+}
+
+img {
+    width: 50%;
+    height: auto;
+}
+
+.medicine-details h1 {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.medicine-details p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.medicine-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.medicine-details ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.medicine-details ul li span {
+    font-weight: bold;
+}
+
+.add-to-cart-btn {
+    width: 70px;
+    height: 70px;
+    background: radial-gradient(#21b178, #276548);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 36px;
+    position: fixed;
+    bottom: 1vh;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add-to-cart-btn:hover{
+    background: radial-gradient(#0c8856, #0d492d);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}

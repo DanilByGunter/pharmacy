@@ -1,0 +1,63 @@
+db.medicines.aggregate([
+  {$lookup:
+  	{
+    	from: 'categories',
+    	localField: 'category_id',
+    	foreignField: '_id',
+    	as: 'category'
+    }
+  },
+  {
+		$unwind: '$category'
+	},
+  {
+		$project: 
+		{
+			_id: 1,
+			title: 1,
+			count: 1,
+			price: 1,
+			description: 1,
+			prescription: 1,
+			image_path: 1,
+			category: '$category.name'
+		}
+	}
+])
+
+
+
+db.medicines.aggregate([
+  	{'$match': {'_id': ObjectId(id_product)}},
+        {'$lookup':
+            {
+                'from': 'categories',
+                'localField': 'category_id',
+                'foreignField': '_id',
+                'as': 'category'
+            }
+        },
+        {
+                '$unwind': '$category'
+            },
+        {'$project': 
+              {
+                  '_id': 1,
+                  'title': 1,
+                  'count': 1,
+                  'price': 1,
+                  'description': 1,
+                  'prescription': 1,
+                  'image_path': 1,
+                  'category': '$category.name'
+              }
+          }
+        ])
+
+
+{
+    	from: 'medicines',
+    	localField: 'product_id',
+    	foreignField: '_id',
+    	as: 'medicine'
+    }

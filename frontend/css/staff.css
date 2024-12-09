@@ -1,0 +1,25 @@
+.staffs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 4 столбца одинаковой ширины */
+    gap: 10px; /* Расстояние между элементами */
+    max-height: 100vh; /* Ограничиваем высоту контейнера */
+    overflow-y: auto; /* Добавляем вертикальную прокрутку, если контент превышает высоту */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.staff-card {
+    color: var(--text-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.staff-card span{
+    font-weight: bold;
+}
+
+.staff-card img {
+    width: 100%;
+    height: auto;
+}

@@ -1,0 +1,64 @@
+@font-face {
+	font-family: 'Century Gothic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Century Gothic'),
+		url('../fonts/GOTHIC.ttf') format('ttf');
+}
+
+*::-webkit-scrollbar {
+    height: 40px;
+    width: 12px;
+    cursor: default;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--bkg-panel-color);
+    cursor: default;
+}
+  
+*::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);
+    border-radius: 5px;
+    border: 3px solid var(--text-color);
+    cursor: default;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: var(--design);
+    border: 3px solid var(--design);
+}
+  
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Century Gothic';
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.containter{
+    width: 100%;
+    max-width: 960px;
+    height: 100vh;
+    background-color: var(--container);
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    background-position:center;
+}
+
+a:hover{
+    color: var(--design);
+    background-color: var(--bkg-panel-color);
+}
