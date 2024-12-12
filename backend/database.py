@@ -8,9 +8,9 @@ SECRET_KEY = "f35aK6unLA7Tplq359hadux26jls9a2klal6a8sjfa215jasdis"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 5
 
-DATABASE_URL = "postgresql://postgres:boiler@localhost:5433/drug_store_db"
+DATABASE_URL = "postgresql://postgres:boiler@localhost:5432/drug_store_db"
 
-MONGO_URL = "mongodb://localhost:27018"
+MONGO_URL = "mongodb://localhost:27017"
 MONGODB_NAME = "boiler"
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")

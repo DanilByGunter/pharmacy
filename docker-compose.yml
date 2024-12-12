@@ -39,7 +39,7 @@ services:
   postgres:
     image: postgres:13
     ports:
-      - "5432:5433"
+      - "5432:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: boiler
@@ -52,7 +52,7 @@ services:
   mongo:
     image: mongo:latest
     ports:
-      - "27017:27018"
+      - "27017:27017"
     volumes:
       - mongo_data:/data/db
     networks:
