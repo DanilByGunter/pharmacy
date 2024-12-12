@@ -6,9 +6,9 @@ from fastapi.security import OAuth2PasswordBearer
 # Конфигурация приложения и JWT
 SECRET_KEY = "f35aK6unLA7Tplq359hadux26jls9a2klal6a8sjfa215jasdis"
 ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 2
+ACCESS_TOKEN_EXPIRE_MINUTES = 5
 
-DATABASE_URL = "postgresql://postgres:l06a08r56a@localhost:5432/drug_store_db"
+DATABASE_URL = "postgresql://postgres:boiler@localhost:5432/drug_store_db"
 
 MONGO_URL = "mongodb://localhost:27017"
 MONGODB_NAME = "boiler"
