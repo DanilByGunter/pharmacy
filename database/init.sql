@@ -100,7 +100,8 @@ $$ language 'plpgsql' STRICT;
 
 INSERT INTO roles (id, name) VALUES
     (1, 'ROLE_USER'), 
-    (2, 'ROLE_ADMIN');
+    (2, 'ROLE_ADMIN')
+    ON CONFLICT DO NOTHING;
 
 INSERT INTO users (id, username, password)
 VALUES
@@ -111,8 +112,8 @@ VALUES
 (5, 'admin5', '$2b$12$I1j5h6Q6gcrJspGStmkpkehRokJcq2IX6qgl/u/fTav0WH.HQaG3a'), --admin5:useruser
 (6, 'user1', '$2b$12$YYG6HCxe7bebaICcV319NOTFFAV/gb1u5rDDkF8nGIv2SRx.64rq2'), --user1:useruser
 (7, 'user2', '$2b$12$YYG6HCxe7bebaICcV319NOTFFAV/gb1u5rDDkF8nGIv2SRx.64rq2'), --user2:useruser
-(8, 'user3', '$2b$12$YYG6HCxe7bebaICcV319NOTFFAV/gb1u5rDDkF8nGIv2SRx.64rq2'); --user3:useruser
-
+(8, 'user3', '$2b$12$YYG6HCxe7bebaICcV319NOTFFAV/gb1u5rDDkF8nGIv2SRx.64rq2') --user3:useruser
+    ON CONFLICT DO NOTHING;
 
 INSERT INTO users_roles (user_id, role_id)
 VALUES
@@ -123,12 +124,14 @@ VALUES
     (5, 2),
     (6, 1),
     (7, 1),
-    (8, 1);
+    (8, 1)
+    ON CONFLICT DO NOTHING;
 
 INSERT INTO positions (id, name) VALUES 
     (1, 'Фармацевт'), 
     (2, 'Администратор'), 
-    (3, 'Менеджер');
+    (3, 'Менеджер')
+    ON CONFLICT DO NOTHING;
 
 INSERT INTO employees(id, login, name, surname, patronymic, email, phone_number, birth_date, salary, hire_date, image_path, position_id)
 VALUES
@@ -141,4 +144,5 @@ VALUES
 	(4, 'admin4','Анна', 'Киберова', 'Сеченовна', 'velini_kofe41@ya.ru', '79951089415',
 	random_date(), random_between(100000, 300000), DATE('2023-11-03'), 'https://storage.yandexcloud.net/pharmacy/staff/4.JPG', random_between(1,3)),
 	(5, 'admin5', 'Валерия', 'Ботникова', 'Роботна', 'nadez_odope16@ya.ru', '72588531303',
-	random_date(), random_between(100000, 300000), DATE('2029-02-10'), 'https://storage.yandexcloud.net/pharmacy/staff/5.JPG', random_between(1,3));
+	random_date(), random_between(100000, 300000), DATE('2029-02-10'), 'https://storage.yandexcloud.net/pharmacy/staff/5.JPG', random_between(1,3))
+    ON CONFLICT DO NOTHING;

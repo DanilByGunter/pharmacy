@@ -69,13 +69,13 @@ services:
       POSTGRES_PASSWORD: boiler
       POSTGRES_DB: drug_store_db
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      # - postgres_data:/var/lib/postgresql/data
       - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
 
   mongo:
     image: mongo:4.4
     volumes:
-      - mongo_data:/data/db
+      # - mongo_data:/data/db
       - ./database/init.js:/docker-entrypoint-initdb.d/init.js
 
   backend:
