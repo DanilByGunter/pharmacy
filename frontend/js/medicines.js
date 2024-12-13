@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const medicineId = params.get('id');
     if (medicineId) {
         
-        const response = await fetch(`http://localhost:8000/api/medicines/${medicineId}`, {
+        const response = await fetch(`http://51.250.112.186:8000/api/medicines/${medicineId}`, {
             method: 'GET',
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('jwtToken'),
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             `;
             const addToCartBtn = document.getElementById('addToCartBtn');
             addToCartBtn.addEventListener('click', async () => {
-                const cartResponse = await fetch('http://localhost:8000/api/order', {
+                const cartResponse = await fetch('http://51.250.112.186:8000/api/order', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

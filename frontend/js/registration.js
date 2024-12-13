@@ -12,7 +12,7 @@ document.querySelector("#registration").addEventListener("submit", async functio
   } else if (password != password_verify) {
     alert("Проверьте, что пароли совпадают");
   } else {
-    const response = await fetch("http://localhost:8000/api/register", {
+    const response = await fetch("http://51.250.112.186:8000/api/register", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -21,7 +21,7 @@ document.querySelector("#registration").addEventListener("submit", async functio
     });
 
     if (response.ok) {
-      const response_token = await fetch('http://127.0.0.1:8000/api/token', {
+      const response_token = await fetch('http://51.250.112.186:8000/api/token', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',

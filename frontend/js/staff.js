@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
     const staffsInfo = document.getElementById('staffsInfo');
 
-    const response = await fetch('http://localhost:8000/api/staff', {
+    const response = await fetch('http://51.250.112.186:8000/api/staff', {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + localStorage.getItem('jwtToken'),
