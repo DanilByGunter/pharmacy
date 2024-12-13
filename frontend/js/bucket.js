@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         element2.remove();
     };
 
-    const response = await fetch('http://51.250.112.186:8000/api/bucket/me', {
+    const response = await fetch('http://51.250.112.186/api/bucket/me', {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + localStorage.getItem('jwtToken'),

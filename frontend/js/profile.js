@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
 
     const path = localStorage.getItem('username').includes('user') ? 'clients' : 'users';
-    const response = await fetch('http://51.250.112.186:8000/api/'+path+'/me/'+localStorage.getItem('username'), {
+    const response = await fetch('http://51.250.112.186/api/'+path+'/me/'+localStorage.getItem('username'), {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + localStorage.getItem('jwtToken'),

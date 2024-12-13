@@ -9,7 +9,7 @@ document.querySelector("#authorization").addEventListener("submit", async functi
     } else if (password.length < 8) {
         alert("Проверьте, что длина пароля больше 8 символов")
     } else {
-        const response = await fetch('http://51.250.112.186:8000/api/token', {
+        const response = await fetch('http://51.250.112.186/api/token', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',

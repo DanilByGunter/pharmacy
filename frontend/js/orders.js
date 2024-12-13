@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const element2 = document.getElementById('a2');
         element2.remove();
     };
-    const response = await fetch('http://51.250.112.186:8000/api/orders/me', {
+    const response = await fetch('http://51.250.112.186/api/orders/me', {
         method: 'GET',
         headers: {
             'Authorization': 'Bearer ' + localStorage.getItem('jwtToken'),
