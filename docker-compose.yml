@@ -58,9 +58,6 @@
 #     networks:
 #       - dev
 
-networks:
-  dev:
-
 services:
   backend:
     build:
@@ -78,7 +75,7 @@ services:
       - "80:80"
 
   db:
-    image: postgres:13
+    image: postgres:14
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: boiler
@@ -87,7 +84,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   mongo:
-    image: mongo:4.4
+    image: mongo:latest
     volumes:
       - mongo_data:/data/db
 
