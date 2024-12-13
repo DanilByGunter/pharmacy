@@ -1,20 +1,19 @@
-CREATE DATABASE IF NOT EXISTS drug_store_db;
+-- CREATE DATABASE IF NOT EXISTS drug_store_db;
 
-DROP TABLE IF EXISTS users;
-CREATE TABLE users (
+-- USE drug_store_db;
+
+CREATE TABLE IF NOT EXISTS users (
     id SERIAL PRIMARY KEY,
     username VARCHAR(30) NOT NULL UNIQUE, --то же самое, что и логин
     password VARCHAR(80) NOT NULL
 );
 
-DROP TABLE IF EXISTS roles;
-CREATE TABLE roles (
+CREATE TABLE IF NOT EXISTS roles (
     id SERIAL PRIMARY KEY,
     name VARCHAR(50) NOT NULL
 );
 
-DROP TABLE IF EXISTS users_roles;
-CREATE TABLE users_roles (
+CREATE TABLE IF NOT EXISTS users_roles (
     user_id INT NOT NULL,
     role_id INT NOT NULL,
     PRIMARY KEY (user_id, role_id),
@@ -26,14 +25,12 @@ CREATE TABLE users_roles (
 
 --\c drug_store_db
 
-DROP TABLE IF EXISTS positions;
-CREATE TABLE positions (
+CREATE TABLE IF NOT EXISTS positions (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(100) NOT NULL UNIQUE
 );
 
-DROP TABLE IF EXISTS employees;
-CREATE TABLE employees (
+CREATE TABLE IF NOT EXISTS employees (
     id SERIAL PRIMARY KEY,
     login VARCHAR(255) NULL UNIQUE,
     name VARCHAR(255) NOT NULL,

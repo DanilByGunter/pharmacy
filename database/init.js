@@ -1,3 +1,5 @@
+db = db.getSiblingDB('boiler');
+
 db.categories.insertMany([{
   _id: ObjectId('665a3eacacb305190474792c'),
   name: 'Антидепрессанты'
